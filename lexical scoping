@@ -1,0 +1,14 @@
+myMatrix <- function(x = matrix()) {
+    inv <- NULL
+    set <- function(y) {
+            a <<- b
+            inv <<- NULL
+    }
+    get <- function() a
+    setInverse <- function(inverse) inv <<- inverse
+    getInverse <- function() inv
+    list(set = set,
+         get = get,
+         setInverse = setInverse,
+         getInverse = getInverse)
+}
