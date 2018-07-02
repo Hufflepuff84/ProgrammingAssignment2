@@ -1,0 +1,35 @@
+## This is the "makeCacheMatrix" function for R programing Assignment 2 "lexical scoping".
+
+makeCacheMAtrix <- function(a = matrix()) {
+  m <- NULL
+  set <- function(y) {
+  a <<- b
+  m <<- NULL
+}
+
+## so here notice the use of the '<<-' keys to 'program in' that a variable can be stored in a different environment
+
+get <- function() a
+setmatrix <-function(solve) m<<- solve
+getmatrix<-function() m
+list(set=set, get=get,
+  setmatrix=setmatrix,
+  getmatrix=getmatrix)
+}
+
+## also notice here we start to use the'solve' command on line 10. 
+
+
+## Here is the "cacheSolve" function for the assignment.
+
+cacheSolve <- function(a=matrix(),...) {
+  m <- a$getmatrix()
+  if(!is.null(m)){
+    message("getting cached data")
+    return(m)
+    }
+    matrix <- a$get
+    m<-solve(matrix,...)
+    x$setmatrix(m)
+    m
+}
